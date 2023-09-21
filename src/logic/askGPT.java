@@ -1,10 +1,15 @@
+package logic;
+
+
+import menu.menu;
+
 public class askGPT extends musicGen {
     menu menu = new menu();
 
     String lyrics = menu.lyrics();
     String genre = menu.genre();
 
-    public String charGPT(String prompt){
+    public String chatGPT(String prompt){
         System.out.println(context);
         System.out.println(prompt);
         System.out.println("...");
@@ -14,7 +19,7 @@ public class askGPT extends musicGen {
     }
     public void askPrompt(){
         prompt = "letra:"+lyrics+"\ngénero: "+genre;
-        charGPT(prompt);
+        chatGPT(prompt);
     }
     
 }
